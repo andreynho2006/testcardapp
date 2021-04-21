@@ -32,9 +32,13 @@ struct ContentView: View {
                 Spacer()
                 Button(action: {
                     
+                    // generate a random number between 2 and 14
+                    let playerRandomNumber = Int.random(in: 2...14)
+                    let cpuRandomNumber = Int.random(in: 2...14)
+                    
                     // Update the cards
-                    playerCard = "card-4"
-                    cpuCard = "card-12"
+                    playerCard = "card-\(playerRandomNumber)"
+                    cpuCard = "card-\(cpuRandomNumber)"
                     
                     //update the score
                     playerScore += 1
