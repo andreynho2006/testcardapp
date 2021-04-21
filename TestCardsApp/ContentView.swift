@@ -41,8 +41,16 @@ struct ContentView: View {
                     cpuCard = "card-\(cpuRandomNumber)"
                     
                     //update the score
-                    playerScore += 1
-                    cpuScore += 1
+                    if playerRandomNumber > cpuRandomNumber {
+                        playerScore += 1
+                    } else if playerRandomNumber < cpuRandomNumber {
+                        cpuScore += 1
+                    } else {
+                        playerScore += 1
+                        cpuScore += 1
+                    }
+                    
+                    
                     
                 }, label: {
                     Image("deal-button")
